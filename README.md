@@ -1,4 +1,4 @@
-Đây là project của nhóm 1 - Môn Phân tích và xử lí dữ liệu.\
+Đây là project của nhóm 1 - Môn Khai phá và phân tích dữ liệu.\
 \
 Đề tài: Phân loại một câu bình luận trên Amazon là khen hay chê.\
 Mô tả sơ lược:
