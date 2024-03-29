@@ -1,0 +1,21 @@
+reviews,labels
+hate,negative
+this mouse no good,negative
+I hate this mouse,negative
+very bad,negative
+fuck,negative
+hello,unknow
+negative,negative
+i hate this product,negative
+"almost good, but the wheel is so bad, it stopped jusst 2 months after buying",negative
+Almost good good good good good good good good,positive
+the wheel so bad,negative
+stopped jusst 2 months after buying,negative
+stopped,negative
+jusst 2 months after buying,unknow
+just,unknow
+2 months,unknow
+1,unknow
+2,unknow
+month,unknow
+months,unknow
