@@ -44,9 +44,9 @@ class PrepareData():
     self.trainset, self.validationset, self.testset = random_split(dataset, [0.8, 0.1, 0.1])
   def __init__(self):
 
-    path_trainset = 'Data\\trainset.pt'
-    path_validationset = 'Data\\validationset.pt'
-    path_testset = 'Data\\testset.pt'
+    path_trainset = '.\Data\\trainset.pt'
+    path_validationset = '.\Data\\validationset.pt'
+    path_testset = '.\Data\\testset.pt'
 
     # tải dữ liệu từ file
     self.trainset = torch.load(path_trainset)

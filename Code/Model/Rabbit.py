@@ -15,9 +15,9 @@ class Rabbit:
 
     if function == None:
 
-      file_path = 'Data\\Data-for-Data-Mining-Project - Source.csv'
+      file_path = '.\Data\\Data-for-Data-Mining-Project - Source.csv'
 
-      file_path_save = 'Data\\Comment_Sentiment.csv'
+      file_path_save = '.\Data\\Comment_Sentiment.csv'
       # pd.DataFrame(columns = ['ID','Tokenize Sentence', 'Label']).to_csv(file_path_save, header=True, index=False, mode = 'w')
 
       children_leopard = Panthera()
