@@ -75,8 +75,8 @@ class Sam_Model:
         x = np.array([comment])
         x = self.tfidf.transform(x)
         if type == 'proba':
-            return self.model.predict_proba(x)
-        return 'positive' if self.model.predict(x)[0] == 1 else 'negative'
+            return self.model.predict_proba(x)[0, 1]
+        return 'positive' if self.model.predict_proba(x)[0, 1] >= 0.5 else 'negative'
 
 def objective(trial, data_train, data_test):
     td = trial.suggest_categorical('data-type', ['content', 'title', 'both'])

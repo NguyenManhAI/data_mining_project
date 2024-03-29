@@ -6,6 +6,8 @@ import pandas as pd
 import optuna, os
 
 if __name__ == '__main__':
+    np.random.seed(42)
+
     # Load data
     data_train = pd.read_csv('data/data_train.csv')
     data_test = pd.read_csv('data/data_test.csv')
