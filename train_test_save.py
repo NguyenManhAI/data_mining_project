@@ -19,7 +19,7 @@ if __name__ == '__main__':
     
     # Tunning parameters
     study = optuna.create_study(direction='maximize')
-    study.optimize(lambda trial: sam_model.objective(trial, data_train, data_test), n_trials=6)
+    study.optimize(lambda trial: sam_model.objective(trial, data_train, data_test), n_trials=24)
 
     
     print(f'\nKết quả tốt nhất : {study.best_value}')
