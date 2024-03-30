@@ -86,7 +86,7 @@ def objective(trial, data_train, data_test):
     X_train, X_test = create_X(data_train, data_test, td)
     y_train, y_test = data_train['Label'], data_test['Label']
     
-    model = Sam_Model(tm, kr)
+    model = TFIDF_SVC_Model(tm, kr)
     model.fit(X_train, y_train)
     
     y_pred = model.predict(X_test)
