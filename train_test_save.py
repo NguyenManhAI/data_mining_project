@@ -1,6 +1,6 @@
 import joblib
 import numpy as np
-import sam_model
+import model.tfidf_svc_model as tsm
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
 import pandas as pd
 import optuna, os
@@ -19,17 +19,17 @@ if __name__ == '__main__':
     
     # Tunning parameters
     study = optuna.create_study(direction='maximize')
-    study.optimize(lambda trial: sam_model.objective(trial, data_train, data_test), n_trials=6)
+    study.optimize(lambda trial: tsm.objective(trial, data_train, data_test), n_trials=24)
 
     
     print(f'\nKết quả tốt nhất : {study.best_value}')
     print(f'Bộ tham số của kết quả tốt nhất : {study.best_params}')
 
     # Chạy lại mô hình với bộ test để thấy các thông số khác của kết quả tốt nhất
-    X_train, X_test = sam_model.create_X(data_train, data_test, study.best_params['data-type'])
+    X_train, X_test = tsm.create_X(data_train, data_test, study.best_params['data-type'])
     y_train, y_test = data_train['Label'], data_test['Label']
 
-    model = sam_model.Sam_Model(study.best_params['model-type'], study.best_params['kernel'])
+    model = tsm.TFIDF_SVC_Model(study.best_params['model-type'], study.best_params['kernel'])
     model.fit(X_train, y_train)
 
     y_pred = model.predict(X_test)
@@ -41,10 +41,10 @@ if __name__ == '__main__':
     print(f'F1 Score : {f1_score(y_test, y_pred):.3f}')
 
     # Đánh giá mô hình bằng bộ val
-    X_train, X_val = sam_model.create_X(data_train, data_val, study.best_params['data-type'])
+    X_train, X_val = tsm.create_X(data_train, data_val, study.best_params['data-type'])
     y_train, y_val = data_train['Label'], data_val['Label']
 
-    model = sam_model.Sam_Model(study.best_params['model-type'], study.best_params['kernel'])
+    model = tsm.TFIDF_SVC_Model(study.best_params['model-type'], study.best_params['kernel'])
     model.fit(X_train, y_train)
 
     y_pred = model.predict(X_val)
@@ -58,6 +58,6 @@ if __name__ == '__main__':
     # Lưu mô hình lại, để sau dùng
     if not os.path.exists('model'):
         os.makedirs('model')
-    joblib.dump(model, "model/sam_model.pkl")
-    print('\nSave model to model/sam_model.pkl')
+    joblib.dump(model, "model/tfidf_svc_model.pkl")
+    print('\nSave model to model/tfidf_svc_model.pkl')
     print('Success!')

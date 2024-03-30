@@ -9,12 +9,16 @@
   VD: Nhãn tương ứng với ví dụ trên: "Khen"\
 
 ### Hướng dẫn sử dụng model SVC
-- Trước hết, tạo một file .py ở cùng vị trí với file sam_model.py.
+- Trước hết, tạo một file .py ở vị trí bất kì.
+- Tìm đường dẫn đến folder chứa file tfidf_svc_model.py; giả sử là bên trong folder model.
 - Sau đó, bên trong file đó, viết đoạn code bên dưới:
 ```
 import joblib
 
-model = joblib.load('model/sam_model.pkl')
+import sys
+sys.path.append('model')
+
+model = joblib.load('model/tfidf_svc_model.pkl')
 
 comment = 'I think i like it'
 model.predictFromComment(comment)
