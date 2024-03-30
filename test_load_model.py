@@ -1,3 +1,4 @@
+# Model LSTM
 import torch
 from model.LSTMModel import LSTMModel, modelEmbedding, predict
 
@@ -9,3 +10,14 @@ embedding_model = modelEmbedding()
 
 text = 'I hate it!'
 print(predict(lstm_model, embedding_model, text, language_path='model/english.pickle'))
+
+# Model TFIDF-SVC
+import joblib
+
+import sys
+sys.path.append('model')
+
+model = joblib.load('model/tfidf_svc_model.pkl')
+
+print(model.predictFromComment('i don\'t like it', type='label'))
+print(model.predictFromComment('i don\'t like it', type='proba'))
