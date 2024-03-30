@@ -32,7 +32,7 @@ def create_X(data_train, data_test, type='content'):
         X_test = data_test['Review Content'] + ' ' + data_test['Review Title']
     return (X_train, X_test)
 
-class Sam_Model:
+class TFIDF_SVC_Model:
     def __init__(self, type='svc', kernel='linear'):
         self.model = svm.SVC(kernel=kernel, probability=True)
         if type == 'logistic':

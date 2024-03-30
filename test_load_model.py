@@ -1,6 +1,9 @@
 import joblib
 
-model = joblib.load('E:/Subject/University/Data_Mining_And_Analysis/data_mining_project/model/sam_model.pkl')
+import sys
+sys.path.append('model')
+
+model = joblib.load('model/tfidf_svc_model.pkl')
 
 print(model.predictFromComment('i don\'t like it', type='label'))
 print(model.predictFromComment('i don\'t like it', type='proba'))
