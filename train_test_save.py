@@ -44,9 +44,6 @@ if __name__ == '__main__':
     X_train, X_val = tsm.create_X(data_train, data_val, study.best_params['data-type'])
     y_train, y_val = data_train['Label'], data_val['Label']
 
-    model = tsm.TFIDF_SVC_Model(study.best_params['model-type'], study.best_params['kernel'])
-    model.fit(X_train, y_train)
-
     y_pred = model.predict(X_val)
 
     print('\nĐánh giá mô hình bằng bộ val:')
