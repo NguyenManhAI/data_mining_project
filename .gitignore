@@ -1,1 +1,4 @@
-data/
+data/Data-for-Data-Mining-Project - Source.csv
+Manh_data/
+__pycache__
+yarn.lock
