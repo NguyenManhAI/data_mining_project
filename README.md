@@ -8,6 +8,7 @@
 - Đầu ra  : Một trong số 2 nhãn: Khen, Chê.\
   VD: Nhãn tương ứng với ví dụ trên: "Khen"
 
+
 ## Hướng dẫn sử dụng model LSTM
 - Tạo một file .py ở vị trí bất kì.
 - Thêm đoạn code dưới đây vào file.
