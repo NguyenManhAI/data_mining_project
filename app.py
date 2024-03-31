@@ -50,8 +50,10 @@ def lstm():
         pred = predict(lstm_model, embedding_model, message, language_path='model/english.pickle')
         label = pred[1]
         proba = pred[0]*100
+        print(label, " : ", proba)
         proba =  round(proba,2) if label == 'positive' else round(100 - proba,2)
-        return jsonify({'message' : f'{label}', 'proba' : proba}) 
+        
+        return jsonify({'message' : f'{label}', 'proba' : proba,'label' : f'{label}'}) 
 
 
 if __name__ == '__main__':
