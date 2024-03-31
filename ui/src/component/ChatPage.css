@@ -1,0 +1,308 @@
+body {
+  background-color:#ffffff; /* Set the background color to gray */
+  margin: 0;
+}
+.ChatApp {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: flex-end;
+  height: 100vh;
+  width: 50%; /* chiếm 50% chiều rộng của màn hình */
+  margin: 0 auto; /* căn ra giữa theo chiều ngang */
+}
+
+.message-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+
+.message {
+  display: flex;
+  flex-direction: column;
+  max-width: 70%; /* Tùy chỉnh chiều rộng tối đa của tin nhắn */
+  padding: 5px;
+  margin-bottom: 5px;
+}
+
+.message-sender {
+  font-weight: bold;
+  margin-bottom: 3px;
+}
+
+.user-message {
+  background-color: #27a4f2;
+  border-radius:10px;
+  align-self: flex-end;
+}
+
+.user-sender {
+  color: #f9f9f9;
+}
+
+.user-text {
+  color: #f1eeee;
+}
+
+.bot-message {
+  background-color: #bababa;
+  border-radius:10px;
+  align-self: flex-start;
+}
+
+.bot-sender {
+  color: rgb(0, 0, 0);
+}
+
+.bot-text {
+  color: rgb(0, 0, 0);
+}
+
+
+.input-container {
+  display: flex;
+  align-items: flex-end;
+  margin-top:auto;
+}
+
+input.input-at-container {
+  flex: 1;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: #414040;
+  color: #fff;
+}
+
+
+
+button {
+  padding: 10px;
+  margin-left: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #e1537c; /* Button background color, you can change this */
+  color: #fff; /* Button text color, you can change this */
+  border: none;
+  border-radius: 5px; /* Rounded corners for the button */
+}
+
+/* Thêm class cho nút switch model */
+.model-switch button {
+  padding: 10px;
+  margin-left: 5px;
+  background-color: #e1537c; /* Màu nền của nút */
+  color: #ffffff; /* Màu chữ của nút */
+  border: none;
+  border-radius: 5px; /* Góc bo tròn của nút */
+  margin-right: 10px; /* Khoảng cách với các phần tử khác */
+}
+
+/* Thêm kiểu dáng cho danh sách model */
+
+
+.model-list  {
+  background-color: #e1537c;
+  display: block;
+  width: 100%; /* Đặt chiều rộng 100% để nút chiếm toàn bộ chiều rộng của danh sách */
+  padding: 10px;
+  background-color: transparent; /* Màu nền trong suốt */
+  border: none;
+  text-align: left; /* Căn lề trái cho nút */
+  cursor: pointer;
+}
+
+.model-list button:hover {
+  background-color: #0d4be9; /* Màu nền khi hover */
+  color: r;
+}
+
+input.positive-slider[type=range] {
+  height: 25px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background-color: #bababa;
+}
+input.positive-slider[type=range]:focus {
+  outline: none;
+}
+input.positive-slider[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #00AA00;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input.positive-slider[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #00AA00;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #A1D0FF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+input.positive-slider[type=range]:focus::-webkit-slider-runnable-track {
+  background: #00AA00;
+}
+input.positive-slider[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #00AA00;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input.positive-slider[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #00AA00;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #A1D0FF;
+  cursor: pointer;
+}
+input.positive-slider[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input.positive-slider[type=range]::-ms-fill-lower {
+  background: #00AA00;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input.positive-slider[type=range]::-ms-fill-upper {
+  background: #00AA00;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input.positive-slider[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #00AA00;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #A1D0FF;
+  cursor: pointer;
+}
+input.positive-slider[type=range]:focus::-ms-fill-lower {
+  background: #00AA00;
+}
+input.positive-slider[type=range]:focus::-ms-fill-upper {
+  background: #00AA00;
+}
+
+
+/* đổi màu thanh proba negative */
+
+input.negative-slider[type=range] {
+  height: 25px;
+  -webkit-appearance: none;
+  margin: 10px 0;
+  width: 100%;
+  background-color: #bababa;
+}
+input.negative-slider[type=range]:focus {
+  outline: none;
+}
+input.negative-slider[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #ff0000;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input.negative-slider[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497E3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #A1D0FF;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+input.negative-slider[type=range]:focus::-webkit-slider-runnable-track {
+  background: #ff0000;
+}
+input.negative-slider[type=range]::-moz-range-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 0px 0px 0px #000000;
+  background: #ff0000;
+  border-radius: 1px;
+  border: 0px solid #000000;
+}
+input.negative-slider[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497E3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #A1D0FF;
+  cursor: pointer;
+}
+input.negative-slider[type=range]::-ms-track {
+  width: 100%;
+  height: 5px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input.negative-slider[type=range]::-ms-fill-lower {
+  background: #ff0000;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input.negative-slider[type=range]::-ms-fill-upper {
+  background: #ff0000;
+  border: 0px solid #000000;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #000000;
+}
+input.negative-slider[type=range]::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #000000;
+  border: 1px solid #2497E3;
+  height: 18px;
+  width: 18px;
+  border-radius: 25px;
+  background: #A1D0FF;
+  cursor: pointer;
+}
+input.negative-slider[type=range]:focus::-ms-fill-lower {
+  background: #ff0000;
+}
+input.negative-slider[type=range]:focus::-ms-fill-upper {
+  background: #ff0000;
+}
