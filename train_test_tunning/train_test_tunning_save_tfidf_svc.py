@@ -1,6 +1,6 @@
 import joblib
 import numpy as np
-import model.tfidf_svc_model as tsm
+from ..model import tfidf_svc_model as tsm
 from sklearn.metrics import accuracy_score, recall_score, precision_score, f1_score
 import pandas as pd
 import optuna, os
