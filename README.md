@@ -56,7 +56,7 @@ Chạy lệnh : `pip install -r requirements.txt`
 (Các thư viện được liệt kê trong requirements.txt có thể không đủ.)
 
 ### 3. Cài đặt yarn:
-Chạy câu lệnh npm install -g yarn trong cmd.
+Chạy câu lệnh `npm install -g yarn` trong cmd.
 
 ### 4. Cài đặt thư viện cho ui
 - Mở cmd tại folder ui.
