@@ -6,7 +6,7 @@ import nltk.data
 import nltk
 from sentence_transformers import SentenceTransformer # embedding câu
 
-from model.LSTMmodel import LSTMModel
+from model.LSTMModel import LSTMModel
 from Preparedata_LSTM import Data
 
 def text2embedding(model_embedding, sentence):
